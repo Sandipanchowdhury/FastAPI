@@ -13,9 +13,10 @@ def home():
 def about():
     return {"message":"This is my about section"}
 
-# Description
-@app.get("/users")
-def users():
+# User_Details
+@app.get("/users/{user_id}")
+def get_users(user_id:int):
     return {
-        "users": ["Mohit","Rohit","Amit"]
+        "user_id" : user_id
     }
+
